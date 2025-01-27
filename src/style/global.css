@@ -112,10 +112,12 @@ nav {
 
 #rooms .description {
   position: relative;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #rooms .facilities {
-  margin: 1em 0;
+  /* margin: 1em 0; */
 }
 
 #rooms .facilities ul {
@@ -140,8 +142,8 @@ nav {
 
 #rooms .price {
   width: 100%;
-  position: absolute;
-  bottom: 0;
+  /* position: absolute;
+  bottom: 0; */
   justify-content: space-between;
   align-items: flex-end;
 }
