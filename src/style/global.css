@@ -8,6 +8,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins';
+  text-decoration: none;
 }
 
 .container {
@@ -41,6 +42,15 @@ nav {
   background-color: white;
   padding: 1em 0;
   z-index: 99;
+}
+
+nav .row {
+  justify-content: flex-start;
+}
+
+nav a {
+  color: black;
+  gap: .5em;
 }
 
 /* End Nav */
@@ -108,6 +118,38 @@ nav {
   border: 1px solid rgb(177, 177, 177);
   border-radius: .5em;
   padding: 1em;
+  position: relative;
+  overflow: hidden;
+}
+
+#rooms .card::after {
+  font-size: .8rem;
+  padding: .5em;
+  border-radius: 0 .5em 0 .5em;
+  position: absolute;
+  right: 0;
+  width: auto;
+  height: auto;
+  background-color: red;
+  color: white;
+}
+
+#rooms .card.standard::after {
+  content: ' ⭐ Recommended ';
+  background-color: lightcoral;
+  color: white;
+}
+
+#rooms .card.most::after {
+  content: ' 👁️‍🗨️ Most order rooms ';
+  background-color: lightgreen;
+  color: green;
+}
+
+#rooms .card.cottage::after {
+  content: ' 🫂 Family Rooms ';
+  background-color: lightblue;
+  color: navy;
 }
 
 #rooms .card .col {
@@ -119,6 +161,7 @@ nav {
   width: 100%;
   height: 300px;
   overflow: hidden;
+  border-radius: .5em;
   background-color: aqua;
 }
 
@@ -134,8 +177,15 @@ nav {
   justify-content: space-between;
 }
 
-#rooms .facilities {
-  /* margin: 1em 0; */
+#rooms .facilities .type {
+  margin-bottom: 1em;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#rooms .facilities .type p {
+  font-size: .8rem;
 }
 
 #rooms .facilities ul {
@@ -147,11 +197,11 @@ nav {
 
 #rooms .facilities ul li {
   justify-content: flex-start;
-  gap: 1em;
-  padding: .5em;
+  gap: .5em;
+  padding: .3em;
   border-radius: .5em;
   border: 1px solid rgb(177, 177, 177);
-  font-size: .8rem;
+  font-size: .7rem;
 }
 
 #rooms .facilities ul li span {
@@ -165,12 +215,16 @@ nav {
 }
 
 #rooms .price .price-detail::after {
-  content: ' / night';
+  content: ' / night (nett)';
+  font-size: .8rem;
+  font-weight: 500;
+  color: rgb(209, 19, 136);
 }
 
 #rooms .price button {
   border: none;
-  background-color: navy;
+  border-radius: .5em;
+  background-color: rgb(209, 19, 136);
   color: ivory;
   padding: 1em;
   font-weight: 500;

@@ -8,3 +8,11 @@ window.addEventListener('scroll', ()=> {
     heroCaption.style.display = 'block'
   }
 })
+
+// cluster price
+const typeCluster = ["standard","deluxe","superior","cottage"]
+const bookingBtn = document.querySelectorAll('#rooms .price button')
+
+bookingBtn.forEach(element => {
+  element.addEventListener('click',() => alert("On Building \nNot Available for Now !"))
+});
