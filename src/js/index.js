@@ -9,6 +9,21 @@ window.addEventListener('scroll', ()=> {
   }
 })
 
+// Swiper JS for Slider
+
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+});
+
 // cluster price
 const typeCluster = ["standard","deluxe","superior","cottage"]
 const bookingBtn = document.querySelectorAll('#rooms .price button')
