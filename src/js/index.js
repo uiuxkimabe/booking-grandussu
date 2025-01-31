@@ -25,7 +25,7 @@ const swiper = new Swiper('.swiper', {
 });
 
 // cluster price
-const typeCluster = ["standard","deluxe","superior","cottage"]
+const cardRooms = document.querySelectorAll('.card')
 const bookingBtn = document.querySelectorAll('#rooms .price button')
 
 bookingBtn.forEach(element => {
