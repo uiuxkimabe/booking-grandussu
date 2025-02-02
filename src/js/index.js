@@ -27,7 +27,14 @@ const swiper = new Swiper('.swiper', {
 // cluster price
 const cardRooms = document.querySelectorAll('.card')
 const bookingBtn = document.querySelectorAll('#rooms .price button')
+const popUpBooking = document.querySelector('#popupBooking');
+const closePopUp = document.querySelector('#popupBooking #close');
 
 bookingBtn.forEach(element => {
-  element.addEventListener('click',() => alert("On Building \nNot Available for Now !"))
+  element.addEventListener('click', () => {
+    popUpBooking.classList.toggle('open')
+  })
 });
+closePopUp.addEventListener('click', () => {
+  popUpBooking.classList.toggle('open')
+})

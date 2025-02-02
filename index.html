@@ -800,27 +800,37 @@
     <!-- End Rooms -->
     <!-- Booking Popup -->
     <section id="popupBooking">
-      <div class="container">
-        <div class="row d-flex">
-          <form>
-            <label for="name" id="name">
+      <div class="container d-flex">
+        <form>
+          <div id="close">❌</div>
+          <div class="row d-grid">
+            <label for="guest">
               <p>Name</p>
-              <input type="text" name="name" placeholder="Ex. John Doe">
+              <input type="text" id="guest" placeholder="Ex. John Doe">
             </label>
-            <label for="date" id="checkIn">
-              <p>Check In</p>
-              <input type="date" name="date" id="dateIn">
-            </label>
-            <label for="date" id="checkOut">
-              <p>Check In</p>
-              <input type="date" name="date" id="dateOut">
-            </label>
-            <label for="pax" id="pax">
+            <label for="guestQty">
               <p>Pax</p>
-              <input type="number" name="pax" id="guestQty">
+              <input type="number" id="guestQty" placeholder="0">
             </label>
-          </form>
-        </div>
+            <label for="checkIn">
+              <p>Check In</p>
+              <input type="date" id="checkIn">
+            </label>
+            <label for="checkOut">
+              <p>Check In</p>
+              <input type="date" id="checkOut">
+            </label>
+            <label for="clusterChoice">
+              <p>Cluster</p>
+              <input type="tel" id="phone">
+            </label>
+            <label for="note">
+              <p>Remark</p>
+              <input type="text" id="note">
+            </label>
+          </div>
+          <button >Check Available</button>
+        </form>
       </div>
     </section>
     <!-- End Booking Popup -->
