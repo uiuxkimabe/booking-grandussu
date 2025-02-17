@@ -144,10 +144,27 @@ const popUpBooking = document.querySelector('#popupBooking');
 // close pop up booking form
 const closePopUp = document.querySelector('#popupBooking #close');
 
+// ID Generate
+const randNumber = ~~[Math.random() * 123456789]
+const character = "GUHC"
+let resultId = `${character}-${randNumber}`
+
+const idBooking = document.querySelector('#bookingID')
+const clusterChoice = document.querySelector('#clusterChoice')
+const clusterNames = document.querySelectorAll('.card .clusters')
+
 // Pop Up Booking
 bookingBtn.forEach(element => {
   element.addEventListener('click', () => {
     popUpBooking.classList.toggle('open')
+    idBooking.value = resultId
+    const clusterTitle = clusterNames.forEach(namesCluster => {
+      let contentCluster = namesCluster.classList.contains("clusters")
+      if (contentCluster.innerText == "Cluster Rose") {
+        console.info("betuul")
+      }
+    });
+    return clusterTitle
   })
 });
 
