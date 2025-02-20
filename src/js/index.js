@@ -151,22 +151,23 @@ let resultId = `${character}-${randNumber}`
 
 const idBooking = document.querySelector('#bookingID')
 const clusterChoice = document.querySelector('#clusterChoice')
-const clusterNames = document.querySelectorAll('.card .clusters')
+const clusterNames = document.querySelectorAll(".card .clusters")
+const arrCluster = Array.from(clusterNames)
+console.info(arrCluster)
 
 // Pop Up Booking
-bookingBtn.forEach(element => {
-  element.addEventListener('click', () => {
+bookingBtn.forEach(button => {
+  button.addEventListener('click', () => {
     popUpBooking.classList.toggle('open')
     idBooking.value = resultId
-    const clusterTitle = clusterNames.forEach(namesCluster => {
-      let contentCluster = namesCluster.classList.contains("clusters")
-      if (contentCluster.innerText == "Cluster Rose") {
-        console.info("betuul")
-      }
-    });
-    return clusterTitle
   })
 });
+
+for (let i = 0; i < bookingBtn.length; i++) {
+  bookingBtn[i].addEventListener('click', () => {
+    clusterChoice.value = arrCluster[i].innerText
+  })
+}
 
 // Close Pop Up Booking
 closePopUp.addEventListener('click', () => {
