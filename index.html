@@ -802,7 +802,7 @@
     <!-- Booking Popup -->
     <section id="popupBooking">
       <div class="container d-flex">
-        <form>
+        <form id="bookingForm">
           <div id="close">❌</div>
           <div class="row d-grid">
             <label for="bookingID">
@@ -830,15 +830,49 @@
               <input type="date" id="checkOut">
             </label>
             <label for="clusterChoice">
-              <p>Cluster</p>
+              <p>Phone</p>
               <input type="tel" id="phone">
             </label>
             <label for="note">
               <p>Remark</p>
               <input type="text" id="note">
             </label>
+            <label for="include" class="include d-flex">
+              <p>Breakfast</p>
+              <input type="checkbox" name="include" id="include">
+            </label>
+            <label for="price-room" id="priceRoom" disabled>
+              <input type="text">
+            </label>
           </div>
-          <button >Check Available</button>
+          <ul class="listing">
+            <li>
+              <h4>#ID Booking</h4>
+            </li>
+            <li>
+              <h4>Cluster</h4>
+            </li>
+            <li>
+              <h4>Guest</h4>
+            </li>
+            <li>
+              <h4>Pax</h4>
+            </li>
+            <li>
+              <h4>Check In</h4>
+            </li>
+            <li>
+              <h4>Check Out</h4>
+            </li>
+            <li>
+              <h4>Phone</h4>
+            </li>
+            <li>
+              <h4>Remark</h4>
+            </li>
+          </ul>
+          <button type="button" id="checkAvailable" onclick="check()">Booking</button>
+          <button class="runbooking">Check Available</button>
         </form>
       </div>
     </section>

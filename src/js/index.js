@@ -151,21 +151,18 @@ let resultId = `${character}-${randNumber}`
 
 const idBooking = document.querySelector('#bookingID')
 const clusterChoice = document.querySelector('#clusterChoice')
+const priceRoom = document.querySelector('#priceRoom input')
 const clusterNames = document.querySelectorAll(".card .clusters")
 const arrCluster = Array.from(clusterNames)
-console.info(arrCluster)
+const arrPrice = Array.from(price)
 
 // Pop Up Booking
-bookingBtn.forEach(button => {
-  button.addEventListener('click', () => {
-    popUpBooking.classList.toggle('open')
-    idBooking.value = resultId
-  })
-});
-
 for (let i = 0; i < bookingBtn.length; i++) {
   bookingBtn[i].addEventListener('click', () => {
+    popUpBooking.classList.toggle('open')
+    idBooking.value = resultId
     clusterChoice.value = arrCluster[i].innerText
+    priceRoom.value = arrPrice[i].innerText
   })
 }
 
@@ -173,3 +170,24 @@ for (let i = 0; i < bookingBtn.length; i++) {
 closePopUp.addEventListener('click', () => {
   popUpBooking.classList.toggle('open')
 })
+
+// Clone Node Booking Form
+const bookingForm = document.querySelector('#popupBooking #bookingForm .row')
+const inputs = document.querySelectorAll("#bookingForm input")
+
+// Listing Booking Detail
+const listing = document.querySelector('.listing')
+let infoDetail = document.querySelectorAll('.listing h4')
+
+function check() {
+  bookingForm.style.display = 'none'
+  listing.style.display = 'grid'
+  const runbooking = document.querySelectorAll('#bookingForm button')
+  runbooking[0].style.display = 'none'
+  runbooking[1].style.display = 'block'
+  inputs.forEach((input, i) => {
+    const element = document.createElement('p')
+    element.textContent = input.value;
+    infoDetail[i].appendChild(element)
+  });
+}

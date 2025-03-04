@@ -9,6 +9,7 @@ body {
   box-sizing: border-box;
   font-family: 'Poppins';
   text-decoration: none;
+  list-style: none;
 }
 
 .container {
@@ -283,7 +284,7 @@ nav a {
 }
 
 #popupBooking form .row {
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1em;
 }
@@ -306,11 +307,19 @@ nav a {
   border-radius: 50%;
 }
 
+#popupBooking form label:first-child, form label:nth-child(2) {
+  display: none;
+}
+
 #popupBooking form label input {
   width: 100%;
-  padding: 1em;
+  padding: .8em;
   border-radius: .5em;
   border: 1px solid rgb(177, 177, 177);
+}
+
+#popupBooking #bookingForm .include {
+  justify-content: flex-start;
 }
 
 #popupBooking button {
@@ -323,8 +332,27 @@ nav a {
   font-weight: 500;
 }
 
-/* End popupBooking */
+#popupBooking .runbooking {
+  display: none;
+}
 
+#popupBooking .listing {
+  display: none;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1em;
+}
+
+#popupBooking .listing li {
+  text-overflow: ellipsis;
+}
+
+#popupBooking .listing p {
+  font-size: .8rem;
+  font-weight: 400;
+  border-bottom: 1px dotted black;
+}
+
+/* End popupBooking */
 
 
 /* Responsive */
