@@ -1,41 +1,40 @@
 /*? no js js needed from me */
 
-window.addEventListener('scroll', ()=> {
-  const heroCaption = document.querySelector('#hero figcaption')
+window.addEventListener("scroll", () => {
+  const heroCaption = document.querySelector("#hero figcaption");
   if (window.scrollY > 199) {
-    heroCaption.style.display = 'none'
+    heroCaption.style.display = "none";
   } else {
-    heroCaption.style.display = 'block'
+    heroCaption.style.display = "block";
   }
-})
+});
 
 // Swiper JS for Slider
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper(".swiper", {
   // Optional parameters
-  direction: 'horizontal',
+  direction: "horizontal",
   loop: true,
 
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
-
 });
 
 // Class untuk Harga Kamar sesuai type
 
 // cluster price
 // all rooms
-const cardRooms = document.querySelectorAll('.card')
-const stdRooms = document.querySelectorAll('.standard')
-const deluxeRooms = document.querySelectorAll('.deluxe')
-const superiorRooms = document.querySelectorAll('.superior')
-const cottageRooms = document.querySelectorAll('.cottage')
+const cardRooms = document.querySelectorAll(".card");
+const stdRooms = document.querySelectorAll(".standard");
+const deluxeRooms = document.querySelectorAll(".deluxe");
+const superiorRooms = document.querySelectorAll(".superior");
+const cottageRooms = document.querySelectorAll(".cottage");
 
 // all price
-const price = document.querySelectorAll('.price-detail')
+const price = document.querySelectorAll(".price-detail");
 
 class Rate {
   constructor() {
@@ -46,93 +45,103 @@ class Rate {
   }
   // Method Harga Kamar Standard
   standardPrice() {
-    const rooms = cardRooms.forEach(element => {
-      if (element.classList.contains('standard')) {
-        price.forEach(e => {
-          const priceCluster = e.classList.contains('stdPrice')
+    const rooms = cardRooms.forEach((element) => {
+      if (element.classList.contains("standard")) {
+        price.forEach((e) => {
+          const priceCluster = e.classList.contains("stdPrice");
           let resultPrice;
           if (priceCluster) {
-            resultPrice = this.standard
-            e.innerHTML = resultPrice.toLocaleString('id-ID')
+            resultPrice = this.standard;
+            e.innerHTML = resultPrice.toLocaleString("id-ID");
           }
         });
       }
     });
-    return rooms
+    return rooms;
   }
   // Method Harga Kamar Deluxe
   deluxePrice() {
-    const rooms = cardRooms.forEach(element => {
-      if (element.classList.contains('deluxe')) {
-        price.forEach(e => {
-          const priceCluster = e.classList.contains('dlxPrice')
+    const rooms = cardRooms.forEach((element) => {
+      if (element.classList.contains("deluxe")) {
+        price.forEach((e) => {
+          const priceCluster = e.classList.contains("dlxPrice");
           let resultPrice;
           if (priceCluster) {
-            resultPrice = this.deluxe
-            e.innerHTML = resultPrice.toLocaleString('id-ID')
+            resultPrice = this.deluxe;
+            e.innerHTML = resultPrice.toLocaleString("id-ID");
           }
         });
       }
     });
-    return rooms
+    return rooms;
   }
   // Method Harga Kamar Superior
   superiorPrice() {
-    const rooms = cardRooms.forEach(element => {
-      if (element.classList.contains('superior')) {
-        price.forEach(e => {
-          const priceCluster = e.classList.contains('sprPrice')
-          let resultPrice
+    const rooms = cardRooms.forEach((element) => {
+      if (element.classList.contains("superior")) {
+        price.forEach((e) => {
+          const priceCluster = e.classList.contains("sprPrice");
+          let resultPrice;
           if (priceCluster) {
-            resultPrice = this.superior
-            e.innerHTML = resultPrice.toLocaleString('id-ID')
+            resultPrice = this.superior;
+            e.innerHTML = resultPrice.toLocaleString("id-ID");
           }
         });
       }
     });
-    return rooms
+    return rooms;
   }
   // Method Harga Kamar Cottage
   cottagePrice() {
-    const rooms = cardRooms.forEach(element => {
-      if (element.classList.contains('cottage')) {
-        price.forEach(e => {
-          const priceCluster = e.classList.contains('ctgPrice')
-          let resultPrice
+    const rooms = cardRooms.forEach((element) => {
+      if (element.classList.contains("cottage")) {
+        price.forEach((e) => {
+          const priceCluster = e.classList.contains("ctgPrice");
+          let resultPrice;
           if (priceCluster) {
-            resultPrice = this.cottage
-            e.innerHTML = resultPrice.toLocaleString('id-ID')
+            resultPrice = this.cottage;
+            e.innerHTML = resultPrice.toLocaleString("id-ID");
           }
         });
       }
     });
-    return rooms
+    return rooms;
   }
 }
 
 // Standard Rooms
 const rose = new Rate();
-rose.standardPrice()
+rose.standardPrice();
 
 // Deluxe Rooms
 const catalya = new Rate();
-catalya.deluxePrice()
+catalya.deluxePrice();
 
 // Superior Rooms
 const bougenville = new Rate();
-bougenville.superiorPrice()
+bougenville.superiorPrice();
 const eforbia = new Rate();
-eforbia.superiorPrice()
+eforbia.superiorPrice();
 const garbella = new Rate();
-garbella.superiorPrice()
+garbella.superiorPrice();
 const crysant = new Rate();
-crysant.superiorPrice()
+crysant.superiorPrice();
 
 // Cottage Rooms
 const lily = new Rate();
-lily.cottagePrice()
+lily.cottagePrice();
 const anggrek = new Rate();
-anggrek.cottagePrice()
+anggrek.cottagePrice();
 const tulip = new Rate();
-tulip.cottagePrice()
+tulip.cottagePrice();
 
+// Filter Cottage
+function filterCard(type) {
+  cardRooms.forEach((card) => {
+    if (type === "all" || card.classList.contains(type)) {
+      card.classList.remove("hidden");
+    } else {
+      card.classList.add("hidden");
+    }
+  });
+}
