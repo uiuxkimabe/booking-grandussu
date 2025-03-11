@@ -145,3 +145,17 @@ function filterCard(type) {
     }
   });
 }
+
+// Button Open Form
+const form = document.querySelector('#popup')
+const cardBtn = document.querySelectorAll('.card button');
+cardBtn.forEach(element => {
+  element.addEventListener('click', () => {
+    form.classList.add('hidden');
+  })
+});
+
+// Close Form
+function closeForm() {
+  form.classList.remove('hidden');
+}

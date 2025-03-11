@@ -863,6 +863,43 @@
       </div>
     </section>
     <!-- End Rooms -->
+     <!-- popup -->
+      <section id="popup">
+        <form>
+          <div class="close" onclick="closeForm()">❌</div>
+          <div class="row d-grid">
+            <label name="idBooking">
+              <h4>#ID-Booking</h4>
+              <input type="text" placeholder="GUHC-XXX" id="idBooking" />
+            </label>
+            <label name="cluster">
+              <h4>Cluster</h4>
+              <input type="text" placeholder="Cluster" id="cluster" />
+            </label>
+            <label name="guest">
+              <h4>Guest Name</h4>
+              <input type="text" placeholder="John Doe" id="guest" />
+            </label>
+            <label name="pax">
+              <h4>Pax</h4>
+              <input type="number" name="pax" id="pax" value="0">
+            </label>
+            <label name="checkIn">
+              <h4>Check In</h4>
+              <input type="date" name="checkIn" id="checkIn" />
+            </label>
+            <label name="checkOut">
+              <h4>Check Out</h4>
+              <input type="date" name="checkOut" id="checkOut" />
+            </label>
+            <label name="remark">
+              <h4>Remark</h4>
+              <input type="text">
+            </label>
+          </div>
+        </form>
+      </section>
+     <!-- End popup -->
 
     <!-- 👇 javascript code file 👇 -->
     <script src="./src/js/index.js"></script>
