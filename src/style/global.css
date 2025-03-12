@@ -27,7 +27,7 @@ h6 {
 
 .row {
   width: 100%;
-  /* height: 100%; */
+  height: 100%;
 }
 
 .d-flex {
@@ -262,55 +262,54 @@ nav a {
 /* End Rooms */
 
 /* Popup */
-
 #popup {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
   width: 100%;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.795);
-  transition: .5s ease-in-out;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.733);
   transform: translateY(-100%);
-  /* position: relative; */
+  transition: 0.5s ease-in-out;
 }
 
+#popup.hidden {
+  transform: translateY(0);
+}
 
 #popup .close {
-  width: auto;
-  background-color: black;
   position: absolute;
   top: 0;
   right: 0;
 }
 
-#popup.hidden { 
-  transform: translateY(0);
-}
-
 #popup form {
-  width: 80%;
-  height: 100vh;
+  width: 40%;
   background: white;
-  position: relative;
-  overflow-y: scroll;
-}
-
-#popup form::-webkit-scrollbar {
-  display: none;
-}
-
-#popup form .row {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1em;
   padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.5em;
 }
 
-#popup form .row input {
+#popup form input {
   width: 100%;
   padding: 0.5em;
-  margin-top: .2em;
+}
+
+.book-btn {
+  gap: 0.5em;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.book-btn button {
+  padding: 0.5em 1em;
+  color: white;
+  border: none;
+  background-color: rgb(209, 19, 136);
+  /* border-radius: 0.8em; */
 }
 
 /* End Popup */
@@ -329,10 +328,11 @@ nav a {
     margin-top: 2em;
   }
 
-  /* popup */
   #popup form {
-    width: 100%;
+    width: 80%;
   }
+
+  /* popup */
 }
 
 @media screen and (max-width: 400px) {
@@ -340,4 +340,9 @@ nav a {
     font-size: 80%;
   }
 
+  /* Popup  */
+  #popup form {
+    width: 90%;
+  }
+  /* End Popup  */
 }
