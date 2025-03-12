@@ -323,16 +323,15 @@ nav a {
   }
 
   /* rooms */
-
   #rooms .price {
     margin-top: 2em;
   }
 
+  /* popup */
   #popup form {
     width: 80%;
   }
-
-  /* popup */
+  /* End Popup */
 }
 
 @media screen and (max-width: 400px) {
@@ -344,5 +343,5 @@ nav a {
   #popup form {
     width: 90%;
   }
-  /* End Popup  */
+  /* End Popup */
 }
