@@ -147,15 +147,21 @@ function filterCard(type) {
 }
 
 // Button Open Form
-const form = document.querySelector('#popup')
-const cardBtn = document.querySelectorAll('.card button');
-cardBtn.forEach(element => {
-  element.addEventListener('click', () => {
-    form.classList.add('hidden');
-  })
+const form = document.querySelector("#popup");
+const cardBtn = document.querySelectorAll(".card button");
+cardBtn.forEach((element) => {
+  element.addEventListener("click", () => {
+    form.classList.add("hidden");
+  });
 });
 
 // Close Form
 function closeForm() {
-  form.classList.remove('hidden');
+  form.classList.remove("hidden");
 }
+
+// Random ID Booking
+const numbRand = 123456789;
+const random = parseInt(Math.random() * numbRand);
+const idBooking = `GUHC-${random}`;
+console.info(idBooking);
