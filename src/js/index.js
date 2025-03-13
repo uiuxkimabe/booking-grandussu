@@ -149,9 +149,23 @@ function filterCard(type) {
 // Button Open Form
 const form = document.querySelector("#popup");
 const cardBtn = document.querySelectorAll(".card button");
-cardBtn.forEach((element) => {
-  element.addEventListener("click", () => {
+
+cardBtn.forEach((button) => {
+  // Ambil Cluster Type pada Form yang Akan diisi Otomatis
+  const clusterType = document.getElementById("clusterType");
+
+  button.addEventListener("click", (event) => {
     form.classList.add("hidden");
+    autoCode();
+    // Dapatkan kartu induk dari tombol yang diklik
+    const card = event.target.closest(".card");
+    // Ambil elemen cluster dari kartu
+    const clusterName = card.querySelector(".clusters");
+
+    if (clusterName) {
+      // Tampilkan nama cluster dari kartu yang diklik
+      clusterType.value = clusterName.textContent;
+    }
   });
 });
 
@@ -161,7 +175,8 @@ function closeForm() {
 }
 
 // Random ID Booking
-const numbRand = 123456789;
-const random = parseInt(Math.random() * numbRand);
-const idBooking = `GUHC-${random}`;
-console.info(idBooking);
+function autoCode() {
+  document.getElementById("idBooking").value = `GUHC-${Math.floor(
+    Math.random() * 1e9
+  )}`;
+}

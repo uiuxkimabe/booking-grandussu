@@ -870,11 +870,16 @@
         <form class="d-grid">
           <label>
             <h5>#ID-Booking</h5>
-            <input type="text" placeholder="GUHC-XXX" disabled />
+            <input type="text" placeholder="GUHC-XXX" id="idBooking" disabled />
           </label>
           <label>
             <h5>Cluster Type</h5>
-            <input type="text" placeholder="Cluster A" disabled />
+            <input
+              type="text"
+              placeholder="Cluster A"
+              id="clusterType"
+              disabled
+            />
           </label>
           <label>
             <h5>Customer</h5>
@@ -899,7 +904,12 @@
           <div class="col book-btn d-flex">
             <label>
               <h5>Price</h5>
-              <input type="input" value="Harga Cluster" />
+              <input
+                type="input"
+                value="Harga Cluster"
+                id="clusterPrice"
+                disabled
+              />
             </label>
             <button>Booking</button>
           </div>
