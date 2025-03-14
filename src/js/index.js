@@ -153,6 +153,7 @@ const cardBtn = document.querySelectorAll(".card button");
 cardBtn.forEach((button) => {
   // Ambil Cluster Type pada Form yang Akan diisi Otomatis
   const clusterType = document.getElementById("clusterType");
+  const clusterPrice = document.getElementById("clusterPrice");
 
   button.addEventListener("click", (event) => {
     form.classList.add("hidden");
@@ -161,10 +162,12 @@ cardBtn.forEach((button) => {
     const card = event.target.closest(".card");
     // Ambil elemen cluster dari kartu
     const clusterName = card.querySelector(".clusters");
+    const clusterSelectPrice = card.querySelector(".price-detail");
 
     if (clusterName) {
       // Tampilkan nama cluster dari kartu yang diklik
       clusterType.value = clusterName.textContent;
+      clusterPrice.value = `${clusterSelectPrice.textContent} / Night`;
     }
   });
 });

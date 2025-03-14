@@ -280,8 +280,9 @@ nav a {
 
 #popup .close {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 10px;
+  right: 10px;
+  background-color: white;
 }
 
 #popup form {
@@ -291,6 +292,11 @@ nav a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 0.5em;
+}
+
+#popup form label[name="idBooking"],
+label[name="clusterType"] {
+  display: none;
 }
 
 #popup form input {
@@ -305,7 +311,8 @@ nav a {
 }
 
 .book-btn button {
-  padding: 0.5em 1em;
+  width: 100%;
+  padding: 0.7em;
   color: white;
   border: none;
   background-color: rgb(209, 19, 136);
