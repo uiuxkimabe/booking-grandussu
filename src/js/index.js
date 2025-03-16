@@ -211,5 +211,5 @@ function message() {
     return `${item} : ${formInput[index].value}.join('\n')`
   })
 
-  return `Data Customer\n${data}\n\nThank you for booking !!!`
+  return `Hi Grand Ussu, I've Booking By Website Please Process My Order\n\nData Customer\n${data}\n\nThank you for booking !!!`
 }
