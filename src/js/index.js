@@ -198,10 +198,8 @@ const formInput = document.querySelectorAll("#popup form input")
 checkOutBtn.addEventListener('click', (e) => {
   e.preventDefault()
   closeForm()
-  setTimeout(() => {
-    const text = encodeURIComponent(message())
-    window.open(`https://wa.me/6281385532791?text=${text}`);
-  }, 1000)
+  const text = encodeURIComponent(message())
+  window.open(`https://wa.me/6281385532791?text=${text}`);
 })
 
 function message() {
