@@ -199,22 +199,17 @@ checkOutBtn.addEventListener('click', (e) => {
   e.preventDefault()
   closeForm()
   setTimeout(() => {
-    console.info(message())
-    window.open('https://wa.me/6281385532791?text=' + encodeURIComponent(message()), '_blank')
-    alert('Thank you for booking with us! \n Your Order is still on precess...')
+    const text = encodeURIComponent(message())
+    window.open(`https://wa.me/6281385532791?text=${text}', '_blank'`)
   }, 1000)
 })
 
 function message() {
-  return ` Data Customer
-      IDBooking: ${formInput[0].value}
-      Cluster: ${formInput[1].value}
-      Name: ${formInput[2].value}
-      Pax: ${formInput[3].value}
-      CheckIn: ${formInput[4].value} 
-      CheckOut: ${formInput[5].value}
-      Remark: ${formInput[6].value}
+  const label = ["IDBooking", "Cluster Type", "Customer Name", "Pax", "Check In", "Check Out", "Remark"]
 
-      Thank You !!
-  `
+  const data = label.map((item, index) => {
+    return `${item} : ${formInput[index].value}.join('\n')`
+  })
+
+  return `Data Customer\n${data}\n\nThank you for booking !!!`
 }
