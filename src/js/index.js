@@ -207,9 +207,7 @@ checkOutBtn.addEventListener('click', (e) => {
 function message() {
   const label = ["IDBooking", "Cluster Type", "Customer Name", "Pax", "Check In", "Check Out", "Remark"]
 
-  const data = label.map((item, index) => {
-    return `${item} : ${formInput[index].value}.join('\n')`
-  })
+  const data = label.map((label, i) => `${label}: ${formInputs[i].value}`).join("\n");
 
   return `Hi Grand Ussu, I've Booking By Website Please Process My Order\n\nData Customer\n${data}\n\nThank you for booking !!!`
 }
