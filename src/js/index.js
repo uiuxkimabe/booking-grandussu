@@ -147,7 +147,8 @@ function filterCard(type) {
 }
 
 // Button Open Form
-const form = document.querySelector("#popup");
+const formHighlight = document.querySelector("#popup");
+const formBooking = document.querySelector("#popup form")
 const cardBtn = document.querySelectorAll(".card button");
 
 cardBtn.forEach((button) => {
@@ -156,7 +157,10 @@ cardBtn.forEach((button) => {
   const clusterPrice = document.getElementById("clusterPrice");
 
   button.addEventListener("click", (event) => {
-    form.classList.add("hidden");
+    formHighlight.classList.add("hidden");
+    setTimeout(() => {
+      formBooking.classList.add("hidden");
+    }, 500);
     autoCode();
     // Dapatkan kartu induk dari tombol yang diklik
     const card = event.target.closest(".card");
@@ -174,7 +178,10 @@ cardBtn.forEach((button) => {
 
 // Close Form
 function closeForm() {
-  form.classList.remove("hidden");
+  formBooking.classList.remove("hidden");
+  setTimeout(() => {
+    formHighlight.classList.remove("hidden");
+  }, 500);
 }
 
 // Random ID Booking
@@ -183,3 +190,31 @@ function autoCode() {
     Math.random() * 1e9
   )}`;
 }
+
+// Check Out Button
+const checkOutBtn = document.querySelector("#popup .checkOutBtn")
+const formInput = document.querySelectorAll("#popup form input")
+
+checkOutBtn.addEventListener('click', (e) => {
+  e.preventDefault()
+  closeForm()
+  const message = () => {
+    return ` Data Customer
+      IDBooking: ${formInput[0].value}
+      Cluster: ${formInput[1].value}
+      Name: ${formInput[2].value}
+      Pax: ${formInput[3].value}
+      CheckIn: ${formInput[4].value} 
+      CheckOut: ${formInput[5].value}
+      Remark: ${formInput[6].value}
+
+      Thank You !!
+      `
+    }
+    setTimeout(() => {
+      console.info(message())
+      window.open('https://wa.me/6281385532791?text=' + encodeURIComponent(message), '_blank')
+      alert('Thank you for booking with us! \n Your Order is still on precess...')
+    }, 1000)
+})
+
