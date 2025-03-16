@@ -198,8 +198,15 @@ const formInput = document.querySelectorAll("#popup form input")
 checkOutBtn.addEventListener('click', (e) => {
   e.preventDefault()
   closeForm()
-  const message = () => {
-    return ` Data Customer
+  setTimeout(() => {
+    console.info(message())
+    window.open('https://wa.me/6281385532791?text=' + encodeURIComponent(message()), '_blank')
+    alert('Thank you for booking with us! \n Your Order is still on precess...')
+  }, 1000)
+})
+
+function message() {
+  return ` Data Customer
       IDBooking: ${formInput[0].value}
       Cluster: ${formInput[1].value}
       Name: ${formInput[2].value}
@@ -209,12 +216,5 @@ checkOutBtn.addEventListener('click', (e) => {
       Remark: ${formInput[6].value}
 
       Thank You !!
-      `
-    }
-    setTimeout(() => {
-      console.info(message())
-      window.open('https://wa.me/6281385532791?text=' + encodeURIComponent(message), '_blank')
-      alert('Thank you for booking with us! \n Your Order is still on precess...')
-    }, 1000)
-})
-
+  `
+}
