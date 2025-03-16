@@ -200,7 +200,7 @@ checkOutBtn.addEventListener('click', (e) => {
   closeForm()
   setTimeout(() => {
     const text = encodeURIComponent(message())
-    window.open(`https://wa.me/6281385532791?text=${text}', '_blank'`)
+    window.open(`https://wa.me/6281385532791?text=${text}`, "_blank");
   }, 1000)
 })
 
