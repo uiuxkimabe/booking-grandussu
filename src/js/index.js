@@ -200,6 +200,9 @@ checkOutBtn.addEventListener('click', (e) => {
   closeForm()
   const text = encodeURIComponent(message())
   window.open(`https://wa.me/6281280010003?text=${text}`);
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => console.log('Success!', response))
+    .catch(error => console.error('Error!', error.message))
 })
 
 function message() {
@@ -231,11 +234,11 @@ document.querySelectorAll('.datePicker').forEach(element => {
 
 // Form Booking
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwP4uUqRSfcorg_2MUZDCF5IAud0TBayVbXNtJAvQKm2J_96r6ASZq5vzpiQg3mduYlVQ/exec'
-  const form = document.forms['submit-to-google-sheet']
+const form = document.forms['submit-to-google-sheet']
 
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-  })
+// form.addEventListener('submit', e => {
+//   e.preventDefault()
+//   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+//     .then(response => console.log('Success!', response))
+//     .catch(error => console.error('Error!', error.message))
+// })
