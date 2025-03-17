@@ -203,7 +203,7 @@ checkOutBtn.addEventListener('click', (e) => {
 })
 
 function message() {
-  const label = ["IDBooking", "Cluster Type", "Customer Name", "Pax", "Check In", "Check Out", "Remark", "Total Price"];
+  const label = ["IDBooking", "Cluster Type", "Customer Name", "Pax", "Check In", "Check Out", "Note", "Total Price"];
 
   const data = label.map((label, i) => `${label}: ${formInput[i].value}`).join("\n");
 
@@ -228,3 +228,14 @@ document.querySelectorAll('.datePicker').forEach(element => {
   element.setAttribute('min', disableDate())
   element.setAttribute('value', disableDate())
 });
+
+// Form Booking
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwP4uUqRSfcorg_2MUZDCF5IAud0TBayVbXNtJAvQKm2J_96r6ASZq5vzpiQg3mduYlVQ/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })

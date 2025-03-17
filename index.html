@@ -867,15 +867,16 @@
     <section id="popup">
       <div class="close" onclick="closeForm()">❌</div>
       <div class="row d-flex">
-        <form class="d-grid">
+        <form name="submit-to-google-sheet" class="d-grid">
           <label name="idBooking">
             <h5>#ID-Booking</h5>
-            <input type="text" placeholder="GUHC-XXX" id="idBooking" disabled />
+            <input type="text" name="idBooking" placeholder="GUHC-XXX" id="idBooking" disabled />
           </label>
           <label name="clusterType">
             <h5>Cluster Type</h5>
             <input
               type="text"
+              name="clusterType"
               placeholder="Cluster A"
               id="clusterType"
               disabled
@@ -883,35 +884,36 @@
           </label>
           <label>
             <h5>Guest Name</h5>
-            <input type="text" placeholder="John Doe" />
+            <input type="text" name="guestName" placeholder="John Doe" />
           </label>
           <label>
             <h5>Pax</h5>
-            <input type="number" value="0" />
+            <input type="number" name="pax" value="0" />
           </label>
           <label>
             <h5>Check In</h5>
-            <input type="date" class="datePicker"/>
+            <input type="date" name="checkIn" class="datePicker"/>
           </label>
           <label>
             <h5>Check Out</h5>
-            <input type="date" class="datePicker" />
+            <input type="date" name="checkOut" class="datePicker" />
           </label>
           <label>
-            <h5>Remark</h5>
-            <input type="input" />
+            <h5>Note</h5>
+            <input type="input" name="requestNote" />
           </label>
           <div class="col book-btn d-flex">
             <label>
               <h5>Price</h5>
               <input
                 type="input"
+                name="clusterPrice"
                 value="Harga Cluster"
                 id="clusterPrice"
                 disabled
               />
             </label>
-            <button type="button" class="checkOutBtn">Booking</button>
+            <button type="submit" class="checkOutBtn">Booking</button>
           </div>
         </form>
       </div>
