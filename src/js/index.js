@@ -194,8 +194,11 @@ function autoCode() {
 // Check Out Button
 const checkOutBtn = document.querySelector("#popup .checkOutBtn")
 const formInput = document.querySelectorAll("#popup form input")
+// Form Booking
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzO7BWLEACgXc-RLeD29X6ZWaq2farCVpGqHSsTAzlg/dev'
+const form = document.forms['submit-to-google-sheet']
 
-checkOutBtn.addEventListener('click', (e) => {
+checkOutBtn.addEventListener('click', (e) => {git
   e.preventDefault()
   closeForm()
   const text = encodeURIComponent(message())
@@ -232,10 +235,10 @@ document.querySelectorAll('.datePicker').forEach(element => {
   element.setAttribute('value', disableDate())
 });
 
-// Form Booking
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwP4uUqRSfcorg_2MUZDCF5IAud0TBayVbXNtJAvQKm2J_96r6ASZq5vzpiQg3mduYlVQ/exec'
-const form = document.forms['submit-to-google-sheet']
 
+// Form Booking
+// const scriptURL = 'https://script.google.com/macros/s/AKfycbwP4uUqRSfcorg_2MUZDCF5IAud0TBayVbXNtJAvQKm2J_96r6ASZq5vzpiQg3mduYlVQ/exec'
+// const form = document.forms['submit-to-google-sheet']
 // form.addEventListener('submit', e => {
 //   e.preventDefault()
 //   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
