@@ -199,13 +199,32 @@ checkOutBtn.addEventListener('click', (e) => {
   e.preventDefault()
   closeForm()
   const text = encodeURIComponent(message())
-  window.open(`https://wa.me/6281385532791?text=${text}`);
+  window.open(`https://wa.me/6281280010003?text=${text}`);
 })
 
 function message() {
-  const label = ["IDBooking", "Cluster Type", "Customer Name", "Pax", "Check In", "Check Out", "Remark"]
+  const label = ["IDBooking", "Cluster Type", "Customer Name", "Pax", "Check In", "Check Out", "Remark", "Total Price"];
 
   const data = label.map((label, i) => `${label}: ${formInput[i].value}`).join("\n");
 
-  return `Hi Grand Ussu, I've Booking By Website Please Process My Order\n\nData Customer\n${data}\n\nThank you for booking !!!`
+  return `Hi Grand Ussu, I've Booking By Website Please Process My Order\n\nData Customer\n${data}\n\nLagi Tester !!!`
 }
+
+// Date
+const disableDate = () => {
+  let date = new Date();
+  let day = date.getDate();
+  let month = date.getMonth()+1;
+  let year = date.getFullYear();
+  if (day < 10) {
+    day = '0' + day;
+  } if (month < 10) {
+    month = '0' + month;
+  }
+  return `${year}-${month}-${day}`
+} 
+
+document.querySelectorAll('.datePicker').forEach(element => {
+  element.setAttribute('min', disableDate())
+  element.setAttribute('value', disableDate())
+});
