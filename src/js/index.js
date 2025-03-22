@@ -203,7 +203,7 @@ checkOutBtn.addEventListener("click", (e) => {
   e.preventDefault();
   closeForm();
   const text = encodeURIComponent(message());
-  window.open(`https://wa.me/6283153143923?text=${text}`);
+  window.open(`https://wa.me/6281280010003?text=${text}`);
   fetch(scriptURL, { method: "POST", body: new FormData(form) })
     .then((response) => {
       // reset form
