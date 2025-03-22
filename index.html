@@ -870,7 +870,12 @@
         <form name="submit-to-google-sheet" class="d-grid">
           <label name="idBooking">
             <h5>#ID-Booking</h5>
-            <input type="text" name="idBooking" placeholder="GUHC-XXX" id="idBooking" disabled />
+            <input
+              type="text"
+              name="idBooking"
+              placeholder="GUHC-XXX"
+              id="idBooking"
+            />
           </label>
           <label name="clusterType">
             <h5>Cluster Type</h5>
@@ -879,7 +884,6 @@
               name="clusterType"
               placeholder="Cluster A"
               id="clusterType"
-              disabled
             />
           </label>
           <label>
@@ -892,7 +896,7 @@
           </label>
           <label>
             <h5>Check In</h5>
-            <input type="date" name="checkIn" class="datePicker"/>
+            <input type="date" name="checkIn" class="datePicker" />
           </label>
           <label>
             <h5>Check Out</h5>
@@ -903,14 +907,13 @@
             <input type="input" name="requestNote" />
           </label>
           <div class="col book-btn d-flex">
-            <label>
+            <label name="clusterPrice">
               <h5>Price</h5>
               <input
                 type="input"
                 name="clusterPrice"
                 value="Harga Cluster"
                 id="clusterPrice"
-                disabled
               />
             </label>
             <button type="submit" class="checkOutBtn">Booking</button>

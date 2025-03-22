@@ -148,7 +148,7 @@ function filterCard(type) {
 
 // Button Open Form
 const formHighlight = document.querySelector("#popup");
-const formBooking = document.querySelector("#popup form")
+const formBooking = document.querySelector("#popup form");
 const cardBtn = document.querySelectorAll(".card button");
 
 cardBtn.forEach((button) => {
@@ -171,7 +171,7 @@ cardBtn.forEach((button) => {
     if (clusterName) {
       // Tampilkan nama cluster dari kartu yang diklik
       clusterType.value = clusterName.textContent;
-      clusterPrice.value = `${clusterSelectPrice.textContent} / Night`;
+      clusterPrice.value = `${clusterSelectPrice.textContent}`;
     }
   });
 });
@@ -192,56 +192,60 @@ function autoCode() {
 }
 
 // Check Out Button
-const checkOutBtn = document.querySelector("#popup .checkOutBtn")
-const formInput = document.querySelectorAll("#popup form input")
+const checkOutBtn = document.querySelector("#popup .checkOutBtn");
+// const formInput = document.querySelectorAll("#popup form input");
 // Form Booking
-const scriptURL = 'https://script.google.com/macros/s/AKfycbzO7BWLEACgXc-RLeD29X6ZWaq2farCVpGqHSsTAzlg/dev'
-const form = document.forms['submit-to-google-sheet']
+const scriptURL =
+  "https://script.google.com/macros/s/AKfycby0_Tx77qc4EHt9Ae36nSl4HDtassJBMjWienVAFyjtjb0uwdwsI4vtoLdCdLwXWTq9/exec";
+const form = document.forms["submit-to-google-sheet"];
 
-checkOutBtn.addEventListener('click', (e) => {git
-  e.preventDefault()
-  closeForm()
-  const text = encodeURIComponent(message())
-  window.open(`https://wa.me/6281280010003?text=${text}`);
-  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => console.log('Success!', response))
-    .catch(error => console.error('Error!', error.message))
-})
+checkOutBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  closeForm();
+  const text = encodeURIComponent(message());
+  window.open(`https://wa.me/6283153143923?text=${text}`);
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => {
+      // reset form
+      form.reset();
+      console.log("Success!", response);
+    })
+    .catch((error) => console.error("Error!", error.message));
+});
 
 function message() {
-  const label = ["IDBooking", "Cluster Type", "Customer Name", "Pax", "Check In", "Check Out", "Note", "Total Price"];
+  const label = [
+    "IDBooking",
+    "Cluster Type",
+    "Customer Name",
+    "Pax",
+    "Check In",
+    "Check Out",
+    "Note",
+    "Total Price",
+  ];
 
-  const data = label.map((label, i) => `${label}: ${formInput[i].value}`).join("\n");
+  const data = label.map((label, i) => `${label}: ${form[i].value}`).join("\n");
 
-  return `Hi Grand Ussu, I've Booking By Website Please Process My Order\n\nData Customer\n${data}\n\nLagi Tester !!!`
+  return `Hi Grand Ussu, I've Booking By Website Please Process My Order\n\nData Customer\n${data}\n\nThank You!!!`;
 }
 
 // Date
 const disableDate = () => {
   let date = new Date();
   let day = date.getDate();
-  let month = date.getMonth()+1;
+  let month = date.getMonth() + 1;
   let year = date.getFullYear();
   if (day < 10) {
-    day = '0' + day;
-  } if (month < 10) {
-    month = '0' + month;
+    day = "0" + day;
   }
-  return `${year}-${month}-${day}`
-} 
+  if (month < 10) {
+    month = "0" + month;
+  }
+  return `${year}-${month}-${day}`;
+};
 
-document.querySelectorAll('.datePicker').forEach(element => {
-  element.setAttribute('min', disableDate())
-  element.setAttribute('value', disableDate())
+document.querySelectorAll(".datePicker").forEach((element) => {
+  element.setAttribute("min", disableDate());
+  element.setAttribute("value", disableDate());
 });
-
-
-// Form Booking
-// const scriptURL = 'https://script.google.com/macros/s/AKfycbwP4uUqRSfcorg_2MUZDCF5IAud0TBayVbXNtJAvQKm2J_96r6ASZq5vzpiQg3mduYlVQ/exec'
-// const form = document.forms['submit-to-google-sheet']
-// form.addEventListener('submit', e => {
-//   e.preventDefault()
-//   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-//     .then(response => console.log('Success!', response))
-//     .catch(error => console.error('Error!', error.message))
-// })
