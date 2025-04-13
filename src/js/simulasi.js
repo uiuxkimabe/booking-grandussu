@@ -88,6 +88,27 @@ orderBtn.forEach(element => {
     arrRoomList.push(result)
     addNotif.innerHTML = arrRoomList.length;
     console.info(count)
+    makeOrder()
+    document.querySelector("#popup").classList.toggle("active")
   })
 });
+
+// function 
+function makeOrder() {
+  const roomList = document.querySelector(".room__list ul")
+  const createOrder = document.createElement("li")
+  createOrder.classList.add("add__room", "d-flex")
+  createOrder.innerHTML = `
+    <div class="room__name">
+      <h4>Cluster Rose</h4>
+      <p class="price__room">Rp. 550.000</p>
+    </div>
+    <div class="unit__qty">
+      <input type="number" class="form-control" id="qty" value="1" min="1" max="10">
+    </div>
+    <span class="total__price">Rp. 550.000</span>
+    <button class="btn btn-danger">X</button>
+  `
+  roomList.appendChild(createOrder)
+}
 

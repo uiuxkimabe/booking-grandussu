@@ -272,6 +272,8 @@ nav a {
   transform: translateY(-100%)
 } 
 
+#popup.active {transform: translateY(0);}
+
 #popup .row {
   justify-content: end;
 }
