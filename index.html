@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="description"
+      content="Booking kamar di Grand Ussu Lebih Murah Dengan Memesan Langsung di Website booking.grandussu.com. Harga Lebih Lebih Dibanding Online Travel Agent"
+    />
+    <meta
+      name="keywords"
+      content="Grand Ussu, Grand Ussu Hotel, Grand Ussu Hotel & Convention, Hotel Puncak, Hotel Murah, Hotel Rekomended, Hotel murah, hotel terdekat, hotel di puncak, puncak hotel, hotel spa, grand ussu, ussu, hotel di puncak, grand hotel puncak, hotel di puncak, booking hotel murah, hotel harga murah, diskon kamar hotel, diskon hotel"
+    />
+    <meta name="theme-color" content="#f0206b" />
+    <meta name="author" content="Kiki Afrianto" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Booking Grand Ussu adalah portal untuk pemesanan kamar, event tamu di grand ussu hotel &  convention"
+    />
+    <title>Grand Ussu | Booking</title>
+    <!-- google icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <!-- 👇 css code file 👇 -->
+    <link rel="stylesheet" href="./src/style/global.css" />
+    <!-- Font Share -->
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=hind@400&f[]=poppins@600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/185a3acc44.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Swiper CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <!-- Nav -->
+    <nav>
+      <div class="container">
+        <div class="row d-flex">
+          <div class="col">
+            <a href="https://grandussu.com" class="d-flex"
+              ><span class="material-symbols-outlined"> arrow_back </span>
+              Home</a
+            >
+          </div>
+          <div class="col order__list">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="addList">0</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Nav -->
+    <!-- Hero -->
+    <section id="hero">
+      <div class="row d-flex">
+        <figcaption>
+          <h3>find a cozy place here</h3>
+          <h2>Book and Get Special Price</h2>
+        </figcaption>
+      </div>
+    </section>
+    <!-- End Hero -->
+    <!-- Rooms -->
+    <section id="rooms">
+      <div class="container">
+        <figcaption class="filter-btn d-flex">
+          <button onclick="filterCard('all')">All</button>
+          <button onclick="filterCard('standard')">Standard</button>
+          <button onclick="filterCard('deluxe')">Deluxe</button>
+          <button onclick="filterCard('superior')">Superior</button>
+          <button onclick="filterCard('cottage')">Cottage</button>
+        </figcaption>
+        <div class="row d-grid">
+          <!-- Cluster Rose -->
+          <div class="col card all standard d-grid">
+            <div class="col img-preview swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/rose/ROSE 1.JPG"
+                    alt="Standard Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/rose/ROSE 2.JPG"
+                    alt="Standard Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/rose/ROSE 4.JPG"
+                    alt="Standard Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/rose/ROSE 5.JPG"
+                    alt="Standard Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/rose/ROSE 6.JPG"
+                    alt="Standard Room"
+                  />
+                </div>
+              </div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+            <div class="col description d-flex">
+              <figcaption class="facilities">
+                <figcaption class="type">
+                  <h3 class="clusters">Cluster Rose</h3>
+                  <p>our comfort and saving standard rooms</p>
+                </figcaption>
+                <h3>Facilities</h3>
+                <ul class="d-flex">
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> bed </span>
+                    <p>Twin Bed</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> air </span>
+                    <p>Air Conditioner</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> monitor </span>
+                    <p>Television</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined">
+                      water_heater
+                    </span>
+                    <p>Water Heater</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> wifi </span>
+                    <p>Free Wifi</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined">
+                      emoji_food_beverage
+                    </span>
+                    <p>Amenities</p>
+                  </li>
+                </ul>
+              </figcaption>
+              <figcaption class="price d-grid">
+                <figcaption>
+                  <p>Start From</p>
+                  <h3 class="price-detail stdPrice">0</h3>
+                </figcaption>
+                <button>Booking Now</button>
+              </figcaption>
+            </div>
+          </div>
+          <!-- Cluster Catalya -->
+          <div class="col card all deluxe most d-grid">
+            <div class="col img-preview swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/catalya/CATALLYA 2.jpg"
+                    alt="Deluxe Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/catalya/CATALLYA 3.jpg"
+                    alt="Deluxe Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/catalya/CATALLYA 4.jpg"
+                    alt="Deluxe Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/catalya/CATALLYA 5.jpg"
+                    alt="Deluxe Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/catalya/CATALYA 8.jpg"
+                    alt="Deluxe Room"
+                  />
+                </div>
+              </div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+            <div class="col description d-flex">
+              <figcaption class="facilities">
+                <figcaption class="type">
+                  <h3 class="clusters">Cluster Catalya</h3>
+                  <p>our comfort and saving deluxe rooms</p>
+                </figcaption>
+                <h3>Facilities</h3>
+                <ul class="d-flex">
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> bed </span>
+                    <p>Twin | King Bed</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> air </span>
+                    <p>Air Conditioner</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> monitor </span>
+                    <p>Television</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined">
+                      water_heater
+                    </span>
+                    <p>Water Heater</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> wifi </span>
+                    <p>Free Wifi</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined">
+                      emoji_food_beverage
+                    </span>
+                    <p>Amenities</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined">
+                      local_parking
+                    </span>
+                    <p>Parking Area</p>
+                  </li>
+                </ul>
+              </figcaption>
+              <figcaption class="price d-grid">
+                <figcaption>
+                  <p>Start From</p>
+                  <h3 class="price-detail dlxPrice">0</h3>
+                </figcaption>
+                <button>Booking Now</button>
+              </figcaption>
+            </div>
+          </div>
+          <!-- Cluster Bougenville -->
+          <div class="col card all superior most d-grid">
+            <div class="col img-preview swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/bougenville/BOUGENVILLE 1.jpg"
+                    alt="Superior Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/bougenville/BOUGENVILLE 2.jpg"
+                    alt="Superior Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/bougenville/BOUGENVILLE 3.jpg"
+                    alt="Superior Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/bougenville/BOUGENVILLE 4.jpg"
+                    alt="Superior Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/bougenville/BOUGENVILLE 5.jpg"
+                    alt="Superior Room"
+                  />
+                </div>
+              </div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+            <div class="col description d-flex">
+              <figcaption class="facilities">
+                <figcaption class="type">
+                  <h3 class="clusters">Cluster Bougenville</h3>
+                  <p>our comfort and saving superior rooms</p>
+                </figcaption>
+                <h3>Facilities</h3>
+                <ul class="d-flex">
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> bed </span>
+                    <p>Twin | King Bed</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> air </span>
+                    <p>Air Conditioner</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> monitor </span>
+                    <p>Television</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined">
+                      water_heater
+                    </span>
+                    <p>Water Heater</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> wifi </span>
+                    <p>Free Wifi</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined">
+                      emoji_food_beverage
+                    </span>
+                    <p>Amenities</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined">
+                      local_parking
+                    </span>
+                    <p>Parking Area</p>
+                  </li>
+                </ul>
+              </figcaption>
+              <figcaption class="price d-grid">
+                <figcaption>
+                  <p>Start From</p>
+                  <h3 class="price-detail sprPrice">0</h3>
+                </figcaption>
+                <button>Booking Now</button>
+              </figcaption>
+            </div>
+          </div>
+          <!-- Cluster Eforbia -->
+          <div class="col card all superior d-grid">
+            <div class="col img-preview swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/eforbia/EFORBIA 1.JPG"
+                    alt="Superior Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/eforbia/EFORBIA 2.JPG"
+                    alt="Superior Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/eforbia/EFORBIA 3.JPG"
+                    alt="Superior Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/eforbia/EFORBIA 4.JPG"
+                    alt="Superior Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/eforbia/EFORBIA 5.JPG"
+                    alt="Superior Room"
+                  />
+                </div>
+              </div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+            <div class="col description d-flex">
+              <figcaption class="facilities">
+                <figcaption class="type">
+                  <h3 class="clusters">Cluster Eforbia</h3>
+                  <p>our comfort and saving superior rooms</p>
+                </figcaption>
+                <h3>Facilities</h3>
+                <ul class="d-flex">
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> bed </span>
+                    <p>Twin Bed</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> air </span>
+                    <p>Air Conditioner</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> monitor </span>
+                    <p>Television</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined">
+                      water_heater
+                    </span>
+                    <p>Water Heater</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> wifi </span>
+                    <p>Free Wifi</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined">
+                      emoji_food_beverage
+                    </span>
+                    <p>Amenities</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined">
+                      local_parking
+                    </span>
+                    <p>Parking Area</p>
+                  </li>
+                </ul>
+              </figcaption>
+              <figcaption class="price d-grid">
+                <figcaption>
+                  <p>Start From</p>
+                  <h3 class="price-detail sprPrice">0</h3>
+                </figcaption>
+                <button>Booking Now</button>
+              </figcaption>
+            </div>
+          </div>
+          <!-- Cluster Garbella -->
+          <div class="col card all superior d-grid">
+            <div class="col img-preview swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/garbela/GARBELA 2.JPG"
+                    alt="Superior Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/garbela/GARBELA 1.JPG"
+                    alt="Superior Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/garbela/GARBELA 3.JPG"
+                    alt="Superior Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/garbela/GARBELA 4.JPG"
+                    alt="Superior Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/garbela/GARBELA 5.JPG"
+                    alt="Superior Room"
+                  />
+                </div>
+              </div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+            <div class="col description d-flex">
+              <figcaption class="facilities">
+                <figcaption class="type">
+                  <h3 class="clusters">Cluster Garbela</h3>
+                  <p>our comfort and saving superior rooms</p>
+                </figcaption>
+                <h3>Facilities</h3>
+                <ul class="d-flex">
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> bed </span>
+                    <p>Twin Bed</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> air </span>
+                    <p>Air Conditioner</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> monitor </span>
+                    <p>Television</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined">
+                      water_heater
+                    </span>
+                    <p>Water Heater</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> wifi </span>
+                    <p>Free Wifi</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined">
+                      emoji_food_beverage
+                    </span>
+                    <p>Amenities</p>
+                  </li>
+                </ul>
+              </figcaption>
+              <figcaption class="price d-grid">
+                <figcaption>
+                  <p>Start From</p>
+                  <h3 class="price-detail sprPrice">0</h3>
+                </figcaption>
+                <button>Booking Now</button>
+              </figcaption>
+            </div>
+          </div>
+          <!-- Cluster Crysant -->
+          <div class="col card all superior d-grid">
+            <div class="col img-preview swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/lilly/LILY 1.jpg"
+                    alt="Superior Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/lilly/LILY 2.jpg"
+                    alt="Superior Room"
+                  />
+                </div>
+              </div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+            <div class="col description d-flex">
+              <figcaption class="facilities">
+                <figcaption class="type">
+                  <h3 class="clusters">Cluster Crysant</h3>
+                  <p>our comfort and saving superior rooms</p>
+                </figcaption>
+                <h3>Facilities</h3>
+                <ul class="d-flex">
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> bed </span>
+                    <p>Twin Bed</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> air </span>
+                    <p>Air Conditioner</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> monitor </span>
+                    <p>Television</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined">
+                      water_heater
+                    </span>
+                    <p>Water Heater</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> wifi </span>
+                    <p>Free Wifi</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined">
+                      emoji_food_beverage
+                    </span>
+                    <p>Amenities</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> garage </span>
+                    <p>Carpot</p>
+                  </li>
+                </ul>
+              </figcaption>
+              <figcaption class="price d-grid">
+                <figcaption>
+                  <p>Start From</p>
+                  <h3 class="price-detail sprPrice">0</h3>
+                </figcaption>
+                <button>Booking Now</button>
+              </figcaption>
+            </div>
+          </div>
+          <!-- Cluster Lily -->
+          <div class="col card all deluxe d-grid">
+            <div class="col img-preview swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/lilly/LILY 1.jpg"
+                    alt="Cottage Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/lilly/LILY 2.jpg"
+                    alt="Cottage Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/lilly/LILY 3.jpg"
+                    alt="Cottage Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/lilly/LILY 4.jpg"
+                    alt="Cottage Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/lilly/LILY 6.jpg"
+                    alt="Cottage Room"
+                  />
+                </div>
+              </div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+            <div class="col description d-flex">
+              <figcaption class="facilities">
+                <figcaption class="type">
+                  <h3 class="clusters">Cluster Lily</h3>
+                  <p>our comfort and saving cottage rooms</p>
+                </figcaption>
+                <h3>Facilities</h3>
+                <ul class="d-flex">
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> bed </span>
+                    <p>Twin | King Bed</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> air </span>
+                    <p>Air Conditioner</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> monitor </span>
+                    <p>Television</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined">
+                      water_heater
+                    </span>
+                    <p>Water Heater</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> wifi </span>
+                    <p>Free Wifi</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined">
+                      emoji_food_beverage
+                    </span>
+                    <p>Amenities</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> garage </span>
+                    <p>Carpot</p>
+                  </li>
+                </ul>
+              </figcaption>
+              <figcaption class="price d-grid">
+                <figcaption>
+                  <p>Start From</p>
+                  <h3 class="price-detail dlxPrice">0</h3>
+                </figcaption>
+                <button>Booking Now</button>
+              </figcaption>
+            </div>
+          </div>
+          <!-- Cluster Anggrek -->
+          <div class="col card all cottage d-grid">
+            <div class="col img-preview swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/anggrek/ANGGREK 1.jpg"
+                    alt="Cottage Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/anggrek/ANGGREK 2.jpg"
+                    alt="Cottage Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/anggrek/ANGGREK 13.jpg"
+                    alt="Cottage Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/anggrek/ANGGREK 10.JPG"
+                    alt="Cottage Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/anggrek/ANGGREK 11.jpg"
+                    alt="Cottage Room"
+                  />
+                </div>
+              </div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+            <div class="col description d-flex">
+              <figcaption class="facilities">
+                <figcaption class="type">
+                  <h3 class="clusters">Cluster Anggrek</h3>
+                  <p>our comfort and saving cottage rooms</p>
+                </figcaption>
+                <h3>Facilities</h3>
+                <ul class="d-flex">
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> bed </span>
+                    <p>Twin | King Bed</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> air </span>
+                    <p>Air Conditioner</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> monitor </span>
+                    <p>Television</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined">
+                      water_heater
+                    </span>
+                    <p>Water Heater</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> wifi </span>
+                    <p>Free Wifi</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined">
+                      emoji_food_beverage
+                    </span>
+                    <p>Amenities</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> garage </span>
+                    <p>Carpot</p>
+                  </li>
+                </ul>
+              </figcaption>
+              <figcaption class="price d-grid">
+                <figcaption>
+                  <p>Start From</p>
+                  <h3 class="price-detail ctgPrice">0</h3>
+                </figcaption>
+                <button>Booking Now</button>
+              </figcaption>
+            </div>
+          </div>
+          <!-- Cluster Tulip -->
+          <div class="col card all cottage d-grid">
+            <div class="col img-preview swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/anggrek/ANGGREK 14.JPG"
+                    alt="Cottage Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/anggrek/ANGGREK 15.jpg"
+                    alt="Cottage Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/anggrek/ANGGREK 16.jpg"
+                    alt="Cottage Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/anggrek/ANGGREK 17.JPG"
+                    alt="Cottage Room"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/assets/rooms/anggrek/ANGGREK 18.jpg"
+                    alt="Cottage Room"
+                  />
+                </div>
+              </div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+            <div class="col description d-flex">
+              <figcaption class="facilities">
+                <figcaption class="type">
+                  <h3 class="clusters">Cluster Tulip</h3>
+                  <p>our comfort and saving cottage rooms</p>
+                </figcaption>
+                <h3>Facilities</h3>
+                <ul class="d-flex">
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> bed </span>
+                    <p>Twin | King Bed</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> air </span>
+                    <p>Air Conditioner</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> monitor </span>
+                    <p>Television</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined">
+                      water_heater
+                    </span>
+                    <p>Water Heater</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> wifi </span>
+                    <p>Free Wifi</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined">
+                      emoji_food_beverage
+                    </span>
+                    <p>Amenities</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-symbols-outlined"> garage </span>
+                    <p>Carpot</p>
+                  </li>
+                </ul>
+              </figcaption>
+              <figcaption class="price d-grid">
+                <figcaption>
+                  <p>Start From</p>
+                  <h3 class="price-detail ctgPrice">0</h3>
+                </figcaption>
+                <button>Booking Now</button>
+              </figcaption>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Rooms -->
+    <!-- popup -->
+    <section id="popup">
+      <div class="row d-flex">
+        <div class="room__list">
+          <ul>
+            <li class="add__room d-flex">
+              <figcaption>
+                <h4>Room Name</h4>
+                <p class="price__room">650.000</p>
+              </figcaption>
+              <figcaption class="unit__qty">
+                <input type="number" value="1" min="1" max="10" />
+              </figcaption>
+              <span class="total">1.300.000</span>
+              <button class="delete__room">❌</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- End popup -->
+
+    <!-- 👇 javascript code file 👇 -->
+    <!-- <script src="./src/js/index.js"></script> -->
+    <script src="./src/js/simulasi.js"></script>
+  </body>
+</html>
