@@ -330,6 +330,12 @@ nav a {
   }
 
   /* rooms */
+  #rooms .row {
+    padding: 1em 0;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1em;
+  }
+
   #rooms .price {
     margin-top: 2em;
   }
