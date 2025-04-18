@@ -312,8 +312,9 @@ nav a {
   border-radius: 0.5em;
 }
 
-.total__payment {
-  margin: .5em 0
+.checked {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1em;
 }
 
 /* End Popup */
@@ -332,8 +333,13 @@ nav a {
   }
 
   /* popup */
-  #popup form {
-    width: 80%;
+  #popup {
+    height: 100vh;
+  }
+
+  #popup .room__list {
+    width: 90%;
+    height: 100%;
   }
   /* End Popup */
 }
@@ -343,9 +349,5 @@ nav a {
     font-size: 80%;
   }
 
-  /* Popup  */
-  #popup form {
-    width: 90%;
-  }
   /* End Popup */
 }
