@@ -87,28 +87,75 @@ orderBtn.forEach(element => {
     e.target.style = "background-color: rgb(177,177,177)"
     arrRoomList.push(result)
     addNotif.innerHTML = arrRoomList.length;
-    console.info(count)
-    makeOrder()
-    document.querySelector("#popup").classList.toggle("active")
+    // create new elemtn list order card
+    const roomList = document.querySelector(".room__list ul")
+    const createOrder = document.createElement("li")
+    createOrder.classList.add("add__room", "d-flex")
+    const card = e.target.closest(".card")
+    const roomName = card.querySelector(".clusters").innerHTML
+    const price = card.querySelector(".price-detail").innerHTML
+    createOrder.innerHTML = `
+      <div class="room__name">
+      <h4>${roomName}</h4>
+      <p class="price__room">${price}</p>
+      </div>
+      <div class="unit__qty">
+      <h4>Qty</h4>
+      <input type="number" class="form-control" id="qty" value="1" min="1" max="5" step="1" style="text-align: center" />
+      </div>
+      <div class="total__price">${price}</div>
+      <button class="btn btn-danger">❌</button>
+    `;
+
+    // Update total price based on quantity
+    const qtyInput = createOrder.querySelector("#qty");
+    const totalPriceElement = createOrder.querySelector(".total__price");
+    qtyInput.addEventListener("input", () => {
+      const qty = parseInt(qtyInput.value) || 1;
+      const updatedPrice = parseInt(price.replace(/\./g, "")) * qty;
+      totalPriceElement.innerHTML = updatedPrice.toLocaleString('id-ID');
+    });
+    // Eksekusi Di buat list room yang di pesan
+    roomList.appendChild(createOrder)
+
+    // total payment
+    const totalPayment = document.querySelector(".total__payment")
+
+    // Refresh total payment on button click
+    const checkTotalButton = document.querySelector(".checkTotal");
+    checkTotalButton.addEventListener("click", () => {
+      const updatedPricesArray = Array.from(document.querySelectorAll(".total__price")).map(priceElement => {
+      return parseInt(priceElement.innerHTML.replace(/\./g, ""));
+      });
+      const updatedTotalSum = updatedPricesArray.reduce((acc, curr) => acc + curr, 0);
+      totalPayment.innerHTML = `Total : ${updatedTotalSum.toLocaleString('id-ID')}`;
+    });
+
+    // Remove order list
+    createOrder.querySelector(".btn-danger").addEventListener("click", () => {
+      const index = Array.from(roomList.children).indexOf(createOrder);
+      arrRoomList.splice(index, 1);
+      addNotif.innerHTML = arrRoomList.length;
+      e.target.disabled = false;
+      e.target.style = "";
+      createOrder.remove();
+
+      // Update total payment after removal
+      const updatedPricesArray = Array.from(document.querySelectorAll(".total__price")).map(priceElement => {
+      return parseInt(priceElement.innerHTML.replace(/\./g, ""));
+      });
+      const updatedTotalSum = updatedPricesArray.reduce((acc, curr) => acc + curr, 0);
+      totalPayment.innerHTML = `Total : ${updatedTotalSum.toLocaleString('id-ID')}`;
+    });
+
   })
 });
 
 // function 
-function makeOrder() {
-  const roomList = document.querySelector(".room__list ul")
-  const createOrder = document.createElement("li")
-  createOrder.classList.add("add__room", "d-flex")
-  createOrder.innerHTML = `
-    <div class="room__name">
-      <h4>Cluster Rose</h4>
-      <p class="price__room">Rp. 550.000</p>
-    </div>
-    <div class="unit__qty">
-      <input type="number" class="form-control" id="qty" value="1" min="1" max="10">
-    </div>
-    <span class="total__price">Rp. 550.000</span>
-    <button class="btn btn-danger">X</button>
-  `
-  roomList.appendChild(createOrder)
-}
+document.querySelector('nav .order__list').addEventListener('click',()=> {
+  document.querySelector("#popup").classList.toggle("active")
+})
 
+document.querySelector('#popup .closePop').addEventListener('click',()=> {
+  document.querySelector("#popup").classList.toggle("active")
+})

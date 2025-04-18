@@ -272,6 +272,14 @@ nav a {
   transform: translateY(-100%)
 } 
 
+#popup .closePop {
+  position: absolute;
+  z-index: 9999;
+  top: 5px;
+  right: 5px;
+  color: white;
+}
+
 #popup.active {transform: translateY(0);}
 
 #popup .row {
@@ -287,16 +295,26 @@ nav a {
   background-color: white;
 }
 
-.room__list .add__room {
-  justify-content: flex-start;
+.room__list ul {
+  height: 250px;
+  overflow-y: scroll;
+  grid-template-columns: repeat(1fr);
+  padding: 1em 0;
+}
+
+.room__list ul .add__room {
+  justify-content: space-between;
   align-items: center;
-  gap: 2em;
+  gap: 1em;
+  margin: .5em 0;
   padding: 1em;
   border: .5px solid rgb(177, 177, 177);
   border-radius: 0.5em;
 }
 
-
+.total__payment {
+  margin: .5em 0
+}
 
 /* End Popup */
 
